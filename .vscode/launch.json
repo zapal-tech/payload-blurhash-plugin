@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/dev",
+      "runtimeArgs": ["-r", "./node_modules/ts-node/register"],
+      "name": "Debug plugin",
+      "program": "${workspaceFolder}/dev/src/server.ts",
+      "outputCapture": "std",
+      "env": {
+        "PAYLOAD_CONFIG_PATH": "${workspaceFolder}/dev/src/payload.config.ts"
+      }
+    }
+  ]
+}

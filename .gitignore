@@ -1,0 +1,10 @@
+build
+dist
+node_modules
+.env
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
+!.env.example
