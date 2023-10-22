@@ -1,4 +1,4 @@
-import type { Plugin } from 'payload/config';
+import type { Config, Plugin } from 'payload/config';
 
 import { getFields } from './fields/getFields';
 import { getBeforeChangeHook } from './hooks/beforeChange';
@@ -6,20 +6,13 @@ import { defaultOptions } from './options';
 import type { PluginOptions } from './types';
 import { extendWebpackConfig } from './webpack';
 
-// This plugin extends all targeted collections by offloading uploaded files
-// to cloud storage instead of solely storing files locally.
-
-// It is based on an adapter approach, where adapters can be written for any cloud provider.
-// Adapters are responsible for providing four actions that this plugin will use:
-// 1. handleUpload, 2. handleDelete, 3. generateURL, 4. staticHandler
-
-// Optionally, the adapter can specify any Webpack config overrides if they are necessary.
+// This plugin extends all targeted collections by generating blurhash for uploaded files
 
 export const blurHash =
   (pluginOptions: PluginOptions): Plugin =>
   (incomingConfig) => {
-    const options = { ...defaultOptions, ...pluginOptions };
-    const config = { ...incomingConfig };
+    const options: PluginOptions = { ...defaultOptions, ...pluginOptions };
+    const config: Config = { ...incomingConfig };
 
     const { collections: collectionSlugs, enabled } = options;
 
@@ -60,5 +53,5 @@ export const blurHash =
           fields,
         };
       }),
-    };
+    } satisfies Config;
   };

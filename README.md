@@ -7,8 +7,6 @@ Turbocharge your website performance by creating ultralight image placeholders, 
 ### 📋 Requirements
 
 - Payload version `1.7.2` or higher is required (version `2.0.0` or higher is recommended)
-- Sharp version `0.32.6` is required (versions `0.31.x` or `0.32.x` is supported, but not recommended due to security
-  vulnerabilities.)
 
 ## 🚀 Getting started
 
