@@ -1,7 +1,7 @@
 {
   "name": "@zapal/payload-blurhash-plugin",
   "description": "Dead simple BlurHash auto generation plugin for Payload CMS",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "homepage:": "https://www.zapal.tech",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
