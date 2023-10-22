@@ -1,13 +1,13 @@
 {
   "name": "@zapal/payload-blurhash-plugin",
-  "description": "",
-  "version": "0.0.1",
+  "description": "Dead simple BlurHash auto generation plugin for Payload CMS",
+  "version": "1.0.0",
   "homepage:": "https://www.zapal.tech",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": {
-    "email": "hello@zapal.tech",
     "name": "Zapal",
+    "email": "hello@zapal.tech",
     "url": "https://www.zapal.tech"
   },
   "maintainers": [
@@ -15,6 +15,10 @@
       "name": "Zapal",
       "email": "hello@zapal.tech",
       "url": "https://www.zapal.tech"
+    },
+    {
+      "name": "Bohdan Kucheriavyi",
+      "email": "bohdan.kucheriavyi@zapal.tech"
     }
   ],
   "repository": {
@@ -34,9 +38,12 @@
     "blur",
     "blurhash",
     "image",
-    "placeholder"
+    "placeholder",
+    "lightweight",
+    "base83"
   ],
   "scripts": {
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "build": "tsc",
     "lint": "eslint src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
@@ -48,7 +55,6 @@
   },
   "files": [
     "dist",
-    "*.js",
     "*.d.ts"
   ],
   "dependencies": {
@@ -56,7 +62,7 @@
   },
   "peerDependencies": {
     "payload": "^1.7.2 || ^2.0.0",
-    "sharp": "^0.31 || ^0.32"
+    "sharp": "^0.32.6 || ^0.32"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
