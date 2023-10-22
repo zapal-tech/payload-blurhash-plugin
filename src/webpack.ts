@@ -22,7 +22,7 @@ export const extendWebpackConfig =
         ...(existingWebpackConfig.resolve || {}),
         alias: {
           ...(existingWebpackConfig.resolve?.alias ? existingWebpackConfig.resolve.alias : {}),
-          '@zapal/plugin-cloud-storage$': path.resolve(__dirname, './admin/index.js'),
+          '@zapal/plugin-cloud-storage': path.resolve(__dirname, './admin/index.js'),
           sharp: path.resolve(__dirname, './mocks/sharp.js'),
         },
         fallback: {
