@@ -53,7 +53,7 @@ required.
 
 | Option               | Type     | Description                                                                   |
 | -------------------- | -------- | ----------------------------------------------------------------------------- |
-| **`collections`** \* | string[] | Array of upload-enabled collections' slugs you want to enable the plugin for. |
+| `collections` \* | string[] | Array of upload-enabled collections' slugs you want to enable the plugin for. |
 | `enabled`            | boolean  | Conditionally enable/disable plugin. Default: true.                           |
 | `width`              | number   | Width to resize the image before computing the blurhash. Default: 32.         |
 | `height`             | number   | Height to resize the image before computing the blurhash. Default: 32.        |
