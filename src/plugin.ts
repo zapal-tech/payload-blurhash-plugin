@@ -1,4 +1,4 @@
-import type { Config } from 'payload/config';
+import type { Plugin } from 'payload/config';
 
 import { getFields } from './fields/getFields';
 import { getBeforeChangeHook } from './hooks/beforeChange';
@@ -16,8 +16,8 @@ import { extendWebpackConfig } from './webpack';
 // Optionally, the adapter can specify any Webpack config overrides if they are necessary.
 
 export const blurHash =
-  (pluginOptions: PluginOptions) =>
-  (incomingConfig: Config): Config => {
+  (pluginOptions: PluginOptions): Plugin =>
+  (incomingConfig) => {
     const options = { ...defaultOptions, ...pluginOptions };
     const config = { ...incomingConfig };
 
