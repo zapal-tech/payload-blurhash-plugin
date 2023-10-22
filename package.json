@@ -1,7 +1,7 @@
 {
   "name": "@zapal/payload-blurhash-plugin",
   "description": "Dead simple BlurHash auto generation plugin for Payload CMS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage:": "https://www.zapal.tech",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zapal-tech/payload-blurhash-plugin.git"
+    "url": "git+https://github.com/zapal-tech/payload-blurhash-plugin.git"
   },
   "license": "MIT",
   "keywords": [
