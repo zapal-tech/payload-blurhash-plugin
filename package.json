@@ -61,7 +61,7 @@
   },
   "peerDependencies": {
     "payload": "^1.7.2 || ^2.0.0",
-    "sharp": "^0.31"
+    "sharp": "^0.31 || ^0.32"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.8.0",
