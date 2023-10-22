@@ -50,8 +50,7 @@
     "test": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts jest --detectOpenHandles --forceExit",
     "prettier": "prettier --write \"dev/**/*.{js,jsx,ts,tsx}\"",
     "clean": "rimraf dist && rimraf dev/package-lock.json",
-    "prepublishOnly": "npm run clean && npm run build",
-    "postinstall": "husky install"
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "files": [
     "dist",
