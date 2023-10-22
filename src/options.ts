@@ -1,5 +1,8 @@
 import type { PluginOptions } from './types';
 
+/**
+ * Default options for the plugin.
+ */
 export const defaultOptions: Partial<PluginOptions> = {
   enabled: true,
   // generateForImageSizes: false,

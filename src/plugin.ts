@@ -30,15 +30,16 @@ export const blurHash =
     // Return early if disabled. Only webpack config mods are applied.
     if (enabled === false) return config;
 
-    const preparedForHookOptions: Required<
-      Pick<PluginOptions, /* 'generateForImageSizes' | */ 'width' | 'height' | 'componentX' | 'componentY'>
-    > = {
+    // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
+    const preparedForHookOptions = {
       // generateForImageSizes: options.generateForImageSizes!,
-      width: options.width!,
-      height: options.height!,
-      componentX: options.componentX!,
-      componentY: options.componentY!,
-    };
+      width: options.width,
+      height: options.height,
+      componentX: options.componentX,
+      componentY: options.componentY,
+    } as Required<
+      Pick<PluginOptions, /* 'generateForImageSizes' | */ 'width' | 'height' | 'componentX' | 'componentY'>
+    >;
 
     return {
       ...config,

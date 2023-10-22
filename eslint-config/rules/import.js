@@ -10,9 +10,6 @@ module.exports = {
     },
   },
   rules: {
-    /**
-     * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-     */
     'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
     'import/no-default-export': 'off',
     'import/prefer-default-export': 'off',
@@ -27,9 +24,6 @@ module.exports = {
       },
     ],
     'import/no-extraneous-dependencies': 'off',
-    /**
-     * https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
-     */
     'import/named': 'error',
     'import/no-relative-packages': 'warn',
     'import/no-import-module-exports': 'warn',

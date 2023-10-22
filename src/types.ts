@@ -1,4 +1,5 @@
-import type { CollectionConfig } from 'payload/types';
+import type { FileData } from 'payload/dist/uploads/types';
+import type { CollectionConfig, PayloadRequest } from 'payload/types';
 
 export interface File {
   filename: string;
@@ -7,6 +8,8 @@ export interface File {
   buffer: Buffer;
   tempFilePath?: string;
 }
+
+export type GetIncomingFiles = (args: { data: Partial<FileData>; req: PayloadRequest }) => File[];
 
 export interface PluginOptions {
   /**

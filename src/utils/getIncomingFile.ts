@@ -1,9 +1,6 @@
-import type { FileData } from 'payload/dist/uploads/types';
-import type { PayloadRequest } from 'payload/types';
+import type { File, GetIncomingFiles } from '../types';
 
-import type { File } from '../types';
-
-export function getIncomingFiles({ req, data }: { data: Partial<FileData>; req: PayloadRequest }): File[] {
+export const getIncomingFiles: GetIncomingFiles = ({ req, data }) => {
   const file = req.files?.file;
 
   let files: File[] = [];
@@ -36,4 +33,4 @@ export function getIncomingFiles({ req, data }: { data: Partial<FileData>; req: 
   }
 
   return files;
-}
+};
