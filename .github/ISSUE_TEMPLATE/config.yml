@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature Request
+    url: https://github.com/zapal-tech/payload-blurhash-plugin/discussions
+    about: Suggest an idea to improve this plugin in our GitHub Discussions
